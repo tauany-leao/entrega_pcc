@@ -1,0 +1,10 @@
+<h1> Vagas para o curso {{cursos}}</h1>
+
+{% if postagens %}
+    {% for p in postagens %}  
+    
+    <h1>{{p.titulo}} </h1>
+    <p> {{p.descricao}}</p>
+    
+    {% endfor %}
+{% endif %}

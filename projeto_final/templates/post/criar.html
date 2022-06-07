@@ -1,0 +1,10 @@
+<h1> Crie sua nova Postagem: </h1>
+
+<form action="/post/criar/" method="post">
+    
+    {% csrf_token %}
+
+    {{form.as_p}}
+    
+    <input type="submit" value= "Postar">
+</form>

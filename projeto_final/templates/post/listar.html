@@ -1,0 +1,26 @@
+<html>
+<h1> Suas postagens </h1>
+
+
+<span> <a href="/post/criar/"> Faça um novo post!</a> </span> <br>
+
+{% if postagens %}
+    {% for p in postagens %}  
+    <h2>
+        <li>
+            {{p.titulo}}
+            <img src="{{p.imagem}}">
+        </li>
+    </h2>
+            <h4> Curso {{p.cursos}}. </h4>
+            <p> {{p.descricao}} </p>
+                 <ul>       
+                 <span> <a href="/post/editar/{{p.id}}/"> Editar </a> </span> <br>
+                 <span> <a href="/post/excluir/{{p.id}}/"> Excluir </a> </span> <br>
+                 </ul>
+    {% endfor %}
+{% else %}
+ <p> Faça uma nova publicação.</p>
+
+{% endif %}
+</html>
